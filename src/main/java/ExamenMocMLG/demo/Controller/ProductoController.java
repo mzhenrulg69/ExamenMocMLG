@@ -48,8 +48,8 @@ public class ProductoController {
     }
 
     @GetMapping(value = "/producto/{productoId}")
-    public List<Producto> getProducto(@PathVariable Long productoId) {
-        return this.productoServiceImpl.findAllProductos();
+    public Optional<Producto> getProducto(@PathVariable Long productoId) {
+        return this.productoServiceImpl.findProducto(productoId);
     }
 
 }
