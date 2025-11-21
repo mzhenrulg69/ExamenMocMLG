@@ -37,7 +37,13 @@ public class ProductoController {
             - Si se indica el precio -> obtener los productos con ese precio.
             - Si se indica la categoria -> obtener los productos con esa categoria.
          */
-
+        if(precio==0 && categoria == null) {
+            return this.productoServiceImpl.findAllProductos();
+        }else if (precio != 0) {
+            return this.productoServiceImpl.findByPrecio(precio);
+        }else{
+            return this.productoServiceImpl.findByCategoria(categoria);
+        }
 
     }
 
