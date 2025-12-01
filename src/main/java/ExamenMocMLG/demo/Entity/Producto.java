@@ -18,13 +18,13 @@ public class Producto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
+    @Column(nullable = false)
     private String nombre;
 
-    @Column
+    @Column(nullable = false)
     private String descripcion;
 
-    @Column
+    @Column(nullable = false)
     private String categoria;
 
     @Column
